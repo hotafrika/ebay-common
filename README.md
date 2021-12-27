@@ -1,3 +1,6 @@
+![example workflow](https://github.com/hotafrika/ebay-common/actions/workflows/autotests.yml/badge.svg)
+
+
 # ebay-common
 The repo contains common tools for using my other eBay libs.
 

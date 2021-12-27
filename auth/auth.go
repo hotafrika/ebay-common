@@ -13,8 +13,46 @@ const ProductionURL string = "https://api.ebay.com/identity/v1/oauth2/token"
 const SandboxURL string = "https://api.sandbox.ebay.com/identity/v1/oauth2/token"
 
 const (
-	ScopeCredentialCommon string = "https://api.ebay.com/oauth/api_scope"
-	// TODO more scopes here
+	// Client Credential Grant Type Scopes
+	ScopeCredentialCommon                 string = "https://api.ebay.com/oauth/api_scope"
+	ScopeCredentialBuyGuestOrder          string = "https://api.ebay.com/oauth/api_scope/buy.guest.order"
+	ScopeCredentialBuyMarketing           string = "https://api.ebay.com/oauth/api_scope/buy.marketing"
+	ScopeCredentialBuyProductFeed         string = "https://api.ebay.com/oauth/api_scope/buy.product.feed"
+	ScopeCredentialBuyMarketplaceInsights string = "https://api.ebay.com/oauth/api_scope/buy.marketplace.insights"
+	ScopeCredentialBuyProxyGuestOrder     string = "https://api.ebay.com/oauth/api_scope/buy.proxy.guest.order"
+	ScopeCredentialBuyItemBulk            string = "https://api.ebay.com/oauth/api_scope/buy.item.bulk"
+
+	// Authorization Code Grant Type Scopes
+	ScopeAuthorizationCommon                                   string = "https://api.ebay.com/oauth/api_scope"
+	ScopeAuthorizationBuyOrderReadonly                         string = "https://api.ebay.com/oauth/api_scope/buy.order.readonly"
+	ScopeAuthorizationBuyGuestOrder                            string = "https://api.ebay.com/oauth/api_scope/buy.guest.order"
+	ScopeAuthorizationSellMarketingReadonly                    string = "https://api.ebay.com/oauth/api_scope/sell.marketing.readonly"
+	ScopeAuthorizationSellMarketing                            string = "https://api.ebay.com/oauth/api_scope/sell.marketing"
+	ScopeAuthorizationSellInventoryReadonly                    string = "https://api.ebay.com/oauth/api_scope/sell.inventory.readonly"
+	ScopeAuthorizationSellInventory                            string = "https://api.ebay.com/oauth/api_scope/sell.inventory"
+	ScopeAuthorizationSellAccountReadonly                      string = "https://api.ebay.com/oauth/api_scope/sell.account.readonly"
+	ScopeAuthorizationSellAccount                              string = "https://api.ebay.com/oauth/api_scope/sell.account"
+	ScopeAuthorizationSellFulfillmentReadonly                  string = "https://api.ebay.com/oauth/api_scope/sell.fulfillment.readonly"
+	ScopeAuthorizationSellFulfillment                          string = "https://api.ebay.com/oauth/api_scope/sell.fulfillment"
+	ScopeAuthorizationSellAnalyticsReadonly                    string = "https://api.ebay.com/oauth/api_scope/sell.analytics.readonly"
+	ScopeAuthorizationSellMarketplaceInsightsReadonly          string = "https://api.ebay.com/oauth/api_scope/sell.marketplace.insights.readonly"
+	ScopeAuthorizationCommerceCatalogReadonly                  string = "https://api.ebay.com/oauth/api_scope/commerce.catalog.readonly"
+	ScopeAuthorizationBuyShoppingCart                          string = "https://api.ebay.com/oauth/api_scope/buy.shopping.cart"
+	ScopeAuthorizationBuyOfferAuction                          string = "https://api.ebay.com/oauth/api_scope/buy.offer.auction"
+	ScopeAuthorizationCommerceIdentityReadonly                 string = "https://api.ebay.com/oauth/api_scope/commerce.identity.readonly"
+	ScopeAuthorizationCommerceIdentityEmailReadonly            string = "https://api.ebay.com/oauth/api_scope/commerce.identity.email.readonly"
+	ScopeAuthorizationCommerceIdentityPhoneReadonly            string = "https://api.ebay.com/oauth/api_scope/commerce.identity.phone.readonly"
+	ScopeAuthorizationCommerceIdentityAddressReadonly          string = "https://api.ebay.com/oauth/api_scope/commerce.identity.address.readonly"
+	ScopeAuthorizationCommerceIdentityNameReadonly             string = "https://api.ebay.com/oauth/api_scope/commerce.identity.name.readonly"
+	ScopeAuthorizationCommerceIdentityStatusReadonly           string = "https://api.ebay.com/oauth/api_scope/commerce.identity.status.readonly"
+	ScopeAuthorizationSellFinances                             string = "https://api.ebay.com/oauth/api_scope/sell.finances"
+	ScopeAuthorizationSellItemDraft                            string = "https://api.ebay.com/oauth/api_scope/sell.item.draft"
+	ScopeAuthorizationSellPaymentDispute                       string = "https://api.ebay.com/oauth/api_scope/sell.payment.dispute"
+	ScopeAuthorizationSellItem                                 string = "https://api.ebay.com/oauth/api_scope/sell.item"
+	ScopeAuthorizationSellReputation                           string = "https://api.ebay.com/oauth/api_scope/sell.reputation"
+	ScopeAuthorizationSellReputationReadonly                   string = "https://api.ebay.com/oauth/api_scope/sell.reputation.readonly"
+	ScopeAuthorizationCommerceNotificationSubscription         string = "https://api.ebay.com/oauth/api_scope/commerce.notification.subscription"
+	ScopeAuthorizationCommerceNotificationSubscriptionReadonly string = "https://api.ebay.com/oauth/api_scope/commerce.notification.subscription.readonly"
 )
 
 // ApplicationToken represents eBay application token object.
