@@ -37,4 +37,20 @@ func main() {
 ```
 
 ### 2. Encoding/decoding eBay datetime values
-In progress...
+
+```go
+package main
+
+import (
+	"fmt"
+	"github.com/hotafrika/ebay-common/datetime"
+)
+
+func main() {
+	ebayDatetime := "2007-07-24T21:05:05.781Z"
+	normalDatetime, _ := datetime.FromEbayDateTime(ebayDatetime)
+
+	againEbayDatetime := datetime.ToEbayDateTime(normalDatetime)
+	fmt.Println(againEbayDatetime) // "2007-07-24T21:05:05.781Z"
+}
+```
